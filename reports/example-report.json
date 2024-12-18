@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 6977600,
+              "duration": 1999600,
               "status": "passed"
             },
             "line": 3,
@@ -24,7 +24,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-12-10T12:13:09.935Z",
+        "start_timestamp": "2024-12-18T09:54:29.752Z",
         "line": 5,
         "name": "Determinant",
         "description": "",
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4983200,
+              "duration": 1000300,
               "status": "passed"
             },
             "line": 6,
@@ -76,7 +76,7 @@
           },
           {
             "result": {
-              "duration": 3986600,
+              "duration": 1000500,
               "status": "passed"
             },
             "line": 11,
@@ -115,7 +115,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-12-10T12:13:10.297Z",
+        "start_timestamp": "2024-12-18T09:54:29.800Z",
         "line": 14,
         "name": "Transpose",
         "description": "",
@@ -162,7 +162,7 @@
           },
           {
             "result": {
-              "duration": 3114300,
+              "duration": 1397100,
               "status": "passed"
             },
             "line": 20,
@@ -218,7 +218,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-12-10T12:13:10.305Z",
+        "start_timestamp": "2024-12-18T09:54:29.808Z",
         "line": 26,
         "name": "Inverse",
         "description": "",
@@ -228,7 +228,7 @@
         "steps": [
           {
             "result": {
-              "duration": 997100,
+              "duration": 2154000,
               "status": "passed"
             },
             "line": 27,
@@ -312,7 +312,7 @@
         ]
       },
       {
-        "start_timestamp": "2024-12-10T12:13:10.309Z",
+        "start_timestamp": "2024-12-18T09:54:29.813Z",
         "line": 37,
         "name": "Cofactor",
         "description": "",
