@@ -27,7 +27,7 @@ pipeline {
 
         stage('Code Quality') {
              steps {
-                    waitForQualityGate timeout: '2' abortPipeline: true
+                    waitForQualityGate timeout: '2', abortPipeline: true
              }
         }
     }
