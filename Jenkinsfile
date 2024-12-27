@@ -14,5 +14,12 @@ pipeline {
                 }
             }
         }
+
+        stage('SonarQube analysis') {
+            steps {
+                // Lancement de l'analyse statique du code.
+                bat "./gradlew sonar"
+            }
+        }
     }
 }
