@@ -3,24 +3,19 @@ pipeline {
 
     stages {
         stage('Test') {
-
-            // Lancement des tests unitaires.
             steps {
+                // Lancement des tests unitaires.
                 bat "./gradlew test"
-            }
 
-            // Archivage des résultats des tests unitaires.
+                // Génération des rapports de tests Cucumber.
+                bat "./gradlew cucumber"
+            }
             post {
+                // Archivage des résultats des tests unitaires.
                 always {
                     junit 'build/test-results/**/*.xml'
                 }
             }
-
-            //Génération des rapports de tests Cucumber
-            steps {
-                bat "./gradlew cucumber"
-            }
         }
     }
-
 }
