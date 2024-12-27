@@ -23,3 +23,12 @@ cucumberReports {
     reports = files('reports/example-report.json')
 }
 
+task cucumber() {
+    dependsOn 'test'
+    doLast {
+        exec {
+            commandLine 'java', '-cp', configurations.testRuntimeClasspath.asPath, 'io.cucumber.core.cli.Main', '--plugin', 'json:reports/example-report.json', '--glue', 'com.example', 'src/test/resources'
+        }
+    }
+}
+
