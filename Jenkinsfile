@@ -2,10 +2,23 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Test') {
+
+            // Lancement des tests unitaires.
             steps {
-                echo 'Building...'
-                bat './gradlew build'
+                bat "./gradlew test"
+            }
+
+            // Archivage des résultats des tests unitaires.
+            post {
+                always {
+                    junit 'build/test-results/**/*.xml'
+                }
+            }
+
+            //Génération des rapports de tests Cucumber
+            steps {
+                bat "./gradlew cucumber"
             }
         }
     }
