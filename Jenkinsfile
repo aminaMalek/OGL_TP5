@@ -1,4 +1,8 @@
 pipeline {
+   options {
+        timeout(time: 1, unit: 'MINUTES')
+    }
+
     agent any
 
     stages {
@@ -19,15 +23,16 @@ pipeline {
             steps {
                 withSonarQubeEnv('sonar') {
                 // Lancement de l'analyse statique du code.
-                    bat "./gradlew sonar"
+                   bat "./gradlew sonar"
                 }
+
 
             }
         }
 
         stage('Code Quality') {
              steps {
-                    waitForQualityGate timeout: '2', abortPipeline: true
+                    waitForQualityGate abortPipeline: true
              }
         }
     }
