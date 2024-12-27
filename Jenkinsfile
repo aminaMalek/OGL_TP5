@@ -21,5 +21,11 @@ pipeline {
                 bat "./gradlew sonar"
             }
         }
+
+        stage('Code Quality') {
+             steps {
+                    waitForQualityGate abortPipeline: true
+             }
+        }
     }
 }
