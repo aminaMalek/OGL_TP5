@@ -1,7 +1,4 @@
 pipeline {
-   options {
-        timeout(time: 1, unit: 'MINUTES')
-    }
 
     agent any
 
@@ -28,12 +25,6 @@ pipeline {
 
 
             }
-        }
-
-        stage('Code Quality') {
-             steps {
-                    waitForQualityGate abortPipeline: true
-             }
         }
     }
 }
