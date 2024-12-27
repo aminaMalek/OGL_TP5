@@ -6,9 +6,6 @@ pipeline {
             steps {
                 // Lancement des tests unitaires.
                 bat "./gradlew test"
-
-                // Génération des rapports de tests Cucumber.
-                bat "./gradlew cucumber"
             }
             post {
                 // Archivage des résultats des tests unitaires.
